@@ -1,5 +1,5 @@
 """
-URL configuration for prueba project.
+URL configuration for CursosDjango project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.0/topics/http/urls/
@@ -16,12 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from inicio import views
+from contenido import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', views.principal, name="Principal"),
-    path('contacto/', views.contacto, name="Contacto"),
-    path('formulario/', views.formulario, name="Formulario"),
-    path('ejemplo/', views.ejemplo, name="Ejemplo"),   
+    path('principal/',views.principal, name="principal"),
+    path('cursos/',views.cursos, name="cursos"),
+    path('contacto/',views.contacto, name="contacto"),
+    
 ]
