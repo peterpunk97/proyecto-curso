@@ -1,55 +1,38 @@
 {% extends "inicio/encabezado.html"%}
 
-{% block titulo%} Formulario {%endblock%}
+{% block titulo%} Formulario {%endblock%} 
 
-{%block imagen%}
+{%block imagen%} 
     {%load static%}
     {%static 'inicio/images/registrar.png'%}
 {%endblock%}
 
-{%block texto%}
+{%block texto%} 
     Registro<span>Registrate</span>
 {%endblock%}
 
-{%block contenido%}
+{%block encabezado%} 
 
-
-
-		<!-- Contenido Principal-->
-        <div class="page-content">
-
-
-			<!--Encabezdo -->
+		
+        	
+			
 			<div class="page-header">
 				<div class="page-title">
 					<h3>Registro
 				    <small>Ingresa tu información</small></h3>
 				</div>
 
-				
-				
 			</div>
-			<!-- /Encabezado-->
+{%endblock %}
+
+{%block body%}<!--bloque body heredado del template encabezado-->
+			
 
 			<!-- Formulario -->
 			<form class="form-horizontal" action="#" role="form">
 
-				<!-- Barra de navegación -->
-				{%block navegacion%}<div class="breadcrumb-line">
-					<ul class="breadcrumb">
-						<li>
-							<a href="{% url 'Principal' %}">
-								{% if request.path == '/' %}
-									Principal
-								{% else %}
-									Principal {{ request.path }}
-								{% endif %}
-							</a>
-						</li>
-					</ul>
-					<!-- /Barra de navegación -->
-					 
-				</div>{%endblock %}
+				
+				
 
 	            <div class="panel panel-default">
 	                <div class="panel-body">
@@ -93,7 +76,7 @@
 				</div>
 			</form>
 		<!-- Fin del Formulario -->
-		</div>
+	
 		<!-- /Contenido Principal-->
 
 {%endblock%}

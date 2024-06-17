@@ -4,23 +4,21 @@
 Contacto
 {% endblock %}
 
-{%block imagen%}
+{%block imagen%} 
     {%load static%}
     {%static 'inicio/images/contacto.png'%}
 {%endblock%}
 
-{%block texto%}
+{%block texto%} 
     Contacto<span>Contactanos</span>
 {%endblock%}
 
-{% block contenido %}
-		<!-- Contenido Principal-->
-        <div class="page-content">
+{%block encabezado%} 
 
 			<!--Encabezdo -->
 			<div class="page-header">
 				<div class="page-title">
-					<h3>Registro
+					<h3>Contacto
 				    <small>Ingresa tu información</small></h3>
 				</div>
 				
@@ -28,22 +26,13 @@ Contacto
 			</div>
 			<!-- /Encabezado-->
 
-			
-			<form class="form-horizontal" action="#" role="form">
-				{%block navegacion%}<div class="breadcrumb-line">
-					<ul class="breadcrumb">
-						<li>
-							<a href="{% url 'Principal' %}">
-								{% if request.path == '/' %}
-									Principal
-								{% else %}
-									Principal {{ request.path }}
-								{% endif %}
-							</a>
-						</li>
-					</ul>
-				</div>{%endblock %}
+{%endblock%}
 
+
+{%block body%} <!--bloque body heredado del template encabezado-->
+			
+				<form class="form-horizontal" action="#" role="form">
+				
 	            <div class="panel panel-default">
 	                <div class="panel-body">
 							<!-- Formulario -->
@@ -57,7 +46,7 @@ Contacto
 				        <div class="form-group">
 				            <label class="col-sm-2 control-label text-right">Mensaje:</label>
 				            <div class="col-sm-10">
-				            	<textarea cols="121" rows="10"> </textarea>
+				            	<textarea cols="123" rows="10"> </textarea>
 				            </div>
 				        </div>
 		
@@ -70,6 +59,4 @@ Contacto
 				</div>
 			</form>
 		<!-- Fin del Formulario -->
-		</div>
-		<!-- /Contenido Principal-->
 {% endblock  %}
