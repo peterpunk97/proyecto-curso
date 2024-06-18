@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos</title>
+    <link rel="stylesheet" href="{% static 'bulma/css/bulma.min.css' %}">
+
+</head>
+
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">Lista de cursos</h1>
+            <h2 class="subtitle">Cursos disponibles:</h2>
+
+            <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb has-succeeds-separator is-centered" aria-label="breadcrumbs">
+            <ul>
+                <li>
+                    <a href="{% url 'Principal' %}">
+                        {% if request.path == '/' %}
+                        Principal
+                        {% else %}
+                        Principal{{ request.path }}
+                        {% endif %}
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'Contacto' %}">Contacto</a>
+                </li>
+                <li>
+                    <a href="{% url 'Cursos' %}">Cursos</a>
+                </li>
+            </ul>
+        </nav>
+            <ul>
+                <li class="box list-item">
+                    <img src="{% static 'img/1.png' %}" alt="Base de datos" style="width: 50px; height: 50px;">
+                    Base de datos
+                </li>
+                <li class="box list-item">
+                    <img src="{% static 'img/2.png' %}" alt="Programación" style="width: 50px; height: 50px;">
+                    Programación
+                </li>
+                <li class="box list-item">
+                    <img src="{% static 'img/3.png' %}" alt="Etc." style="width: 50px; height: 50px;">
+                    Etc.
+                </li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>
+
+<style>
+    .list-item {
+        display: flex;
+        align-items: center;
+    }
+    .list-item img {
+        margin-right: 20px;
+    }
+</style>

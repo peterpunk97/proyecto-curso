@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Inicio{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'bulma/css/bulma.min.css' %}">
+
+</head>
+<body>
+    <!-- contenido -->
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
+
+
+<style>
+    body {
+        background-color: #121212;
+        color: #e0e0e0;
+    }
+    .hero.is-dark {
+        background-color: #1e1e1e;
+    }
+    .hero.is-dark .title,
+    .hero.is-dark .subtitle {
+        color: #e0e0e0;
+    }
+    .breadcrumb a {
+        color: #bb86fc;
+    }
+    .breadcrumb a:hover {
+        color: #3700b3;
+    }
+</style>

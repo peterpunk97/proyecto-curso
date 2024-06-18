@@ -1,0 +1,75 @@
+{% extends "inicio/contenido.html" %}
+
+{% block title %}Contacto{% endblock %}
+
+{% block content %}
+<section class="section">
+    <div class="container">
+        <h1 class="title">Ponte en contacto con nosotros</h1>
+        <h2 class="subtitle">Ingresa tus datos de contacto</h2>
+        
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb has-succeeds-separator is-centered" aria-label="breadcrumbs">
+            <ul>
+                <li>
+                    <a href="{% url 'Principal' %}">
+                        {% if request.path == '/' %}
+                        Principal
+                        {% else %}
+                        Principal{{ request.path }}
+                        {% endif %}
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'Contacto' %}">Contacto</a>
+                </li>
+                <li>
+                    <a href="{% url 'Cursos' %}">Cursos</a>
+                </li>
+            </ul>
+        </nav>
+        
+        <form>
+            <div class="field">
+                <label class="label">Nombre</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Tu nombre">
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Correo Electrónico</label>
+                <div class="control">
+                    <input class="input" type="email" placeholder="Tu correo electrónico">
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Selecciona un curso</label>
+                <div class="control">
+                    <div class="select">
+                        <select>
+                            <option>Curso de Base de Datos</option>
+                            <option>Curso de Programación</option>
+                            <option>Etc...</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Comentarios</label>
+                <div class="control">
+                    <textarea class="textarea" placeholder="Tus comentarios"></textarea>
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="control">
+                    <button class="button is-primary" type="submit">Enviar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "inicio/contenido.html" %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+<section class="hero is-dark is-fullheight">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <h1 class="title">
+                ¡Hola! Bienvenido
+            </h1>
+            <p class="subtitle">
+                Aquí encontrarás cursos de tecnología <br> acuerdo a tus necesidades
+            </p>
+
+            <!-- Breadcrumb Navigation -->
+            <nav class="breadcrumb has-succeeds-separator is-centered" aria-label="breadcrumbs">
+                <ul>
+                    <li>
+                        <a href="{% url 'Principal' %}">
+                            {% if request.path == '/' %}
+                            Principal
+                            {% else %}
+                            Principal{{ request.path }}
+                            {% endif %}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'Contacto' %}">Contacto</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'Cursos' %}">Cursos</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+{% endblock %}
