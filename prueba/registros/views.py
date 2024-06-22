@@ -1,3 +1,6 @@
 from django.shortcuts import render
+from.models import Alumnos
 
-# Create your views here.
+def registros(request):
+    return render(request, "registros/principal.html")
+#Indicamos el lugar donde se renderizara el resultado de esta vista
