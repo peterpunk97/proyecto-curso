@@ -18,4 +18,4 @@ class Alumnos(models.Model): #define la esctructura de la tabla
 
     def __str__(self):
         return self.nombre
-        #indica que se mostrará el nombre cuyo valor 
+        #Indica que se mostrára el nombre como valor en la tabla
