@@ -1,0 +1,52 @@
+{% extends "inicio/encabezado.html" %}
+
+{% block titulo %}
+Comentarios
+{% endblock %}
+
+{% block encabezado %}
+<!--Encabezado -->
+<div class="page-header">
+    <div class="page-title">
+        <h3>Comentarios
+            <small>Lista de comentarios</small>
+        </h3>
+    </div>
+</div>
+<!-- /Encabezado-->
+{% endblock %}
+
+{%block imagen%} 
+    {%load static%}
+    {%static 'inicio/images/comentario.png'%}
+{%endblock%}
+
+{% block texto %}
+Comentarios<span>Listado</span>
+{% endblock %}
+
+{% block contenido %}
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Usuario</th>
+            <th>Mensaje</th>
+            <th>Acción</th>
+            <th>Acción 2</th>
+            
+            
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for comentario in comentarios %}
+        <tr>
+            <td class="text-semibold">{{ comentario.usuario }}</td>
+            <td class="muted">{{ comentario.mensaje }}</td>
+            <td class="muted">Editar</td>
+            <td class="muted">Eliminar</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

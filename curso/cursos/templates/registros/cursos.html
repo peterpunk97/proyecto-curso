@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos</title>
+    <link rel="stylesheet" href="{% static 'bulma/css/bulma.min.css' %}">
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">Lista de cursos</h1>
+            <h2 class="subtitle">Cursos disponibles:</h2>
+
+            <!-- Breadcrumb Navigation -->
+            <nav class="breadcrumb has-succeeds-separator is-centered" aria-label="breadcrumbs">
+                <ul>
+                    <li>
+                        <a href="{% url 'Principal' %}">
+                            {% if request.path == '/' %}
+                            Principal
+                            {% else %}
+                            Principal{{ request.path }}
+                            {% endif %}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'Contacto' %}">Contacto</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'Cursos' %}">Cursos</a>
+                    </li>
+                </ul>
+            </nav>
+
+
+
+            <!-- Card -->
+            <div class="columns is-multiline">
+                {% for curso in cursos %}
+                <div class="column is-one-third">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="{{ curso.imagen.url }}" alt="Imagen del curso">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-content">
+                                    <p class="title is-5">{{ curso.nombreCurso }}</p>
+                                </div>
+                            </div>
+                            <div class="content">
+                                {{ curso.descripcion }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+        </div>
+    </section>
+</body>
+</html>

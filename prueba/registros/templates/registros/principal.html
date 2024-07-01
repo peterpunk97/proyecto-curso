@@ -36,11 +36,12 @@ Principal<span>DSM</span>
             <th>Turno</th>
         </tr>
     </thead>
+
     <tbody>
         {% for alumno in alumnos %}
         <tr>
             <td class="text">
-                <img src="{{alumno.image.url}}" alt="" class="img-media">
+                <img src="{{alumno.imagen.url}}" alt="" class="img-media">
             </td>
             <td class="text-semibold">{{ alumno.matricula }}</td>
             <td class="muted">{{ alumno.nombre }}</td>

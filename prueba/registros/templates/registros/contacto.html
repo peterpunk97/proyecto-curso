@@ -31,7 +31,7 @@ Contacto
 
 {%block contenido%} <!--bloque body heredado del template encabezado-->
 			
-				<form class="form-horizontal" action="{%url 'Registrar'}" method="POST" role="form">
+				<form class="form-horizontal" action="{%url 'Registrar'%}" method="POST" role="form">
 					{%csrf_token%}
 				
 	            <div class="panel panel-default">
