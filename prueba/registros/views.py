@@ -30,8 +30,5 @@ def comentarios(request):
 def comentarios(request):
     comentarios=ComentarioContacto.objects.all()
     return render(request, "registros/comentarios.html",{'comentarios':comentarios})
-    ##all recupera todos los objetos del modelo (registros de la tabla alumnos)
-
-
 
 
