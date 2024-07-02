@@ -31,8 +31,8 @@ Comentarios<span>Listado</span>
         <tr>
             <th>Usuario</th>
             <th>Mensaje</th>
-            <th>Acción</th>
-            <th>Acción 2</th>
+            <th class="text-center">Acción</th>
+            <th class="text-center">Acción 2</th>
             
             
         </tr>
@@ -43,8 +43,8 @@ Comentarios<span>Listado</span>
         <tr>
             <td class="text-semibold">{{ comentario.usuario }}</td>
             <td class="muted">{{ comentario.mensaje }}</td>
-            <td class="muted">Editar</td>
-            <td class="muted">Eliminar</td>
+            <td class="text-center"><a href="{% url 'Eliminar' comentario.id%}">Eliminar</a></td>
+            <td class="text-center"><a href="{% url 'ConsultaIndividual' comentario.id %}">Editar</a></td>
         </tr>
         {% endfor %}
 
