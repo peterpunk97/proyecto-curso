@@ -22,7 +22,9 @@ urlpatterns = [
     path('consultas5/', views_registros.consultar5, name="Consultas5"),
     path('consultas6/', views_registros.consultar6, name="Consultas6"),
     path('consultas7/', views_registros.consultar7, name="Consultas7"),
+    path('sql/', views_registros.consultaSQL, name="sql"),
     path('subir/', views_registros.archivos, name="Subir"),
+    path('seguridad', views_registros.seguridad, name="Seguridad"),
 
 ]
 

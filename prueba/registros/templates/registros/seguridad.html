@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <form method="GET">
+        Nombre:
+        <input type="text" name="nombre">
+        <input type="submit" value="Buscar">
+    </form>
+</body>
+
+    <h2>{{ nombre|safe }}</h2>
+
+    <!--Busqueda-->
+    <script type="application/javascript">
+        var busqueda = new
+        URLSearchParams(document.location.search);
+        if (busqueda.has("nombre")){
+            document.getElementById("resultado").innerHTML = "Resultado: " + busqueda.get("nombre")
+        }
+    </script>
+    <!--Fin Busqueda-->
+
+
+
+
+</html>

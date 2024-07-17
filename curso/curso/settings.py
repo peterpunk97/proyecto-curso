@@ -20,6 +20,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -73,6 +74,17 @@ DATABASES = {
 }
 
 
+JAZZMIN_SETTINGS = {
+    "site_title": "Admin Cursos",
+    "site_header": "Admin Cursos",
+    "site_brand": "Admin Cursos",
+}
+
+
+JAZZMIN_UI_TWEAKS = {
+    "theme": "darkly",
+}
+
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
@@ -95,13 +107,16 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+# settings.py
 
-TIME_ZONE = 'UTC'
+LANGUAGE_CODE = 'es'
+
+TIME_ZONE = 'America/Mexico_City'  
 
 USE_I18N = True
-
+USE_L10N = True
 USE_TZ = True
+
 
 
 # Static files (CSS, JavaScript, Images)
